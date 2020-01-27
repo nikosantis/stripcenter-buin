@@ -10,14 +10,15 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css">
   <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 <body>
 
   <header class="hero is-dark is-fullheight">
     <!-- Hero head: will stick at the top -->
-    <div class="hero-head">
-      <nav class="navbar is-transparent is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="hero-head top-sticky" id="navbarTop">
+      <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
         <div class="container">
           <div class="navbar-brand">
             <a class="navbar-item" href="https://bulma.io">
@@ -85,6 +86,7 @@
       <div class="hero-bg__right"></div>
     </div>
   </header>
+
   <section class="section first-content">
     <div class="container">
       <div class="columns is-multiline is-mobile is-centered">
@@ -105,35 +107,435 @@
           </div>
         </div>
         <div class="column is-10">
-          <div class="columns is-multiline is-mobile">
+          <div class="columns is-variable is-5 is-multiline is-mobile">
             <div class="column is-12-mobile is-desktop-3 has-text-centered">
               <figure class="image is-64x64 has-text-centered mx mb-3">
                 <img src="./assets/images/ubicacion-icon.svg" alt="">
               </figure>
-              <h4 class="title is-4 has-text-danger">Ubicación estratégica de alto flujo potencial</h4>
+              <h5 class="title is-5 has-text-danger has-text-weight-bold">Ubicación estratégica de alto flujo potencial</h5>
             </div>
             <div class="column is-12-mobile is-desktop-3 has-text-centered">
               <figure class="image is-64x64 has-text-centered mx mb-3">
                 <img src="./assets/images/locales-icon.svg" alt="">
               </figure>
-              <h4 class="title is-4 has-text-success">22 Locales Comerciales de 29 a 168 m2</h4>
+              <h5 class="title is-5 has-text-success has-text-weight-bold">22 Locales Comerciales de 29 a 168 m2</h5>
             </div>
             <div class="column is-12-mobile is-desktop-3 has-text-centered">
               <figure class="image is-64x64 has-text-centered mx mb-3">
                 <img src="./assets/images/oficinas-icon.svg" alt="">
               </figure>
-              <h4 class="title is-4 has-text-orange">32 Oficinas de 22,49 a 31,79 m2</h4>
+              <h5 class="title is-5 has-text-orange has-text-weight-bold">32 Oficinas de 22,59 a 31,79 m2</h4>
             </div>
             <div class="column is-12-mobile is-desktop-3 has-text-centered">
               <figure class="image is-64x64 has-text-centered mx mb-3">
                 <img src="./assets/images/estacionamientos-icon.svg" alt="">
               </figure>
-              <h4 class="title is-4 has-text-link">XX Estacionamientos subterráneos y en superficie</h4>
+              <h5 class="title is-5 has-text-link has-text-weight-bold">XX Estacionamientos subterráneos y en superficie</h5>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <section class="section second-content">
+    <div class="container is-fullhd">
+      <div class="columns">
+        <div class="column is-12">
+          <div class="my-slider">
+            <div>
+              <img src="./assets/images/render-1.jpg" class="is-border-10" alt="">
+            </div>
+            <div>
+              <img src="./assets/images/render-2.jpg" class="is-border-10" alt="">
+            </div>
+            <div>
+              <img src="./assets/images/render-3.jpg" class="is-border-10" alt="">
+            </div>
+            <div>
+              <img src="./assets/images/render-4.jpg" class="is-border-10" alt="">
+            </div>
+            <div>
+              <img src="./assets/images/render-5.jpg" class="is-border-10" alt="">
+            </div>
+            <div>
+              <img src="./assets/images/render-6.jpg" class="is-border-10" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section third-content">
+    <div class="container">
+      <div class="columns is-multiline is-centered is-mobile">
+        <div class="column is-10 mb-3 has-text-centered">
+          <h2 class="title is-2 s-title">Strip Center de 4 pisos</h2>
+        </div>
+        <div class="column is-10">
+          <div class="columns">
+            <div class="column is-12" id="tabs-with-content">
+              <div class="tabs is-centered is-medium mb-5">
+                <ul>
+                  <li class="is-active"><a>Subterráneo</a></li>
+                  <li><a>Piso 1</a></li>
+                  <li><a>Piso 3</a></li>
+                  <li><a>Piso 4</a></li>
+                  <li><a>Piso 5</a></li>
+                </ul>
+              </div>
+              <div>
+                <section class="tab-content">
+                  <div class="columns is-multiline is-variable is-mobile">
+                    <div class="column is-12 has-text-centered mb-3">
+                      <h4 class="subtitle is-4">Locales Comerciales, Bodegas y Estacionamientos</h4>
+                    </div>
+                    <div class="column is-7">
+                      <div class="columns is-centered is-mobile">
+                        <div class="column is-10 is-relative">
+                          <div class="tab-box__image">
+                            <img src="./assets/images/plano-1.png" class="tab-image">
+                            <div class="tab-image--button">
+                              <a class="button is-danger is-bordered is-rounded">Descargar planos</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column is-5 has-text-grey">
+                      <div class="field">
+                        <label class="label">Nombre</label>
+                        <div class="control">
+                          <input class="input" type="text">
+                        </div>
+                      </div>
+
+                      <div class="field">
+                        <label class="label">Teléfono</label>
+                        <div class="control">
+                          <input class="input" type="tel">
+                        </div>
+                      </div>
+                      
+                      <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control">
+                          <input class="input" type="email">
+                        </div>
+                      </div>
+
+                      <div class="field">
+                        <div class="control">
+                          <label class="label">¿Qué buscas?</label>
+                          <label class="radio">
+                            <input type="radio" name="question">
+                            Local Comercial
+                          </label>
+                          <label class="radio">
+                            <input type="radio" name="question">
+                            Oficina
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="field">
+                        <label class="label">Comentarios</label>
+                        <div class="control">
+                          <textarea class="textarea has-fixed-size" rows="1"></textarea>
+                        </div>
+                      </div>
+
+                      <div class="field">
+                        <div class="control">
+                          <button class="button is-danger is-rounded is-bordered">Cotizar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section class="tab-content">
+                  <div class="columns is-multiline is-variable is-mobile">
+                    <div class="column is-12 has-text-centered mb-3">
+                      <h4 class="subtitle is-4">Locales Comerciales, Bodegas y Estacionamientos</h4>
+                    </div>
+                    <div class="column is-7">
+                      <div class="columns is-centered is-mobile">
+                        <div class="column is-10 is-relative">
+                          <div class="tab-box__image">
+                            <img src="./assets/images/plano-1.png" class="tab-image">
+                            <div class="tab-image--button">
+                              <a class="button is-danger is-bordered is-rounded">Descargar planos</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column is-5 has-text-grey">
+                      <div class="field">
+                        <label class="label">Nombre</label>
+                        <div class="control">
+                          <input class="input" type="text">
+                        </div>
+                      </div>
+
+                      <div class="field">
+                        <label class="label">Teléfono</label>
+                        <div class="control">
+                          <input class="input" type="tel">
+                        </div>
+                      </div>
+                      
+                      <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control">
+                          <input class="input" type="email">
+                        </div>
+                      </div>
+
+                      <div class="field">
+                        <div class="control">
+                          <label class="label">¿Qué buscas?</label>
+                          <label class="radio">
+                            <input type="radio" name="question">
+                            Local Comercial
+                          </label>
+                          <label class="radio">
+                            <input type="radio" name="question">
+                            Oficina
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="field">
+                        <label class="label">Comentarios</label>
+                        <div class="control">
+                          <textarea class="textarea has-fixed-size" rows="1"></textarea>
+                        </div>
+                      </div>
+
+                      <div class="field">
+                        <div class="control">
+                          <button class="button is-danger is-rounded is-bordered">Cotizar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section class="tab-content">
+                  <div class="columns is-multiline is-variable is-mobile">
+                    <div class="column is-12 has-text-centered mb-3">
+                      <h4 class="subtitle is-4">Locales Comerciales, Bodegas y Estacionamientos</h4>
+                    </div>
+                    <div class="column is-7">
+                      <div class="columns is-centered is-mobile">
+                        <div class="column is-10 is-relative">
+                          <div class="tab-box__image">
+                            <img src="./assets/images/plano-1.png" class="tab-image">
+                            <div class="tab-image--button">
+                              <a class="button is-danger is-bordered is-rounded">Descargar planos</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column is-5 has-text-grey">
+                      <div class="field">
+                        <label class="label">Nombre</label>
+                        <div class="control">
+                          <input class="input" type="text">
+                        </div>
+                      </div>
+
+                      <div class="field">
+                        <label class="label">Teléfono</label>
+                        <div class="control">
+                          <input class="input" type="tel">
+                        </div>
+                      </div>
+                      
+                      <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control">
+                          <input class="input" type="email">
+                        </div>
+                      </div>
+
+                      <div class="field">
+                        <div class="control">
+                          <label class="label">¿Qué buscas?</label>
+                          <label class="radio">
+                            <input type="radio" name="question">
+                            Local Comercial
+                          </label>
+                          <label class="radio">
+                            <input type="radio" name="question">
+                            Oficina
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="field">
+                        <label class="label">Comentarios</label>
+                        <div class="control">
+                          <textarea class="textarea has-fixed-size" rows="1"></textarea>
+                        </div>
+                      </div>
+
+                      <div class="field">
+                        <div class="control">
+                          <button class="button is-danger is-rounded is-bordered">Cotizar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section class="tab-content">
+                  <div class="columns is-multiline is-variable is-mobile">
+                    <div class="column is-12 has-text-centered mb-3">
+                      <h4 class="subtitle is-4">Locales Comerciales, Bodegas y Estacionamientos</h4>
+                    </div>
+                    <div class="column is-7">
+                      <div class="columns is-centered is-mobile">
+                        <div class="column is-10 is-relative">
+                          <div class="tab-box__image">
+                            <img src="./assets/images/plano-1.png" class="tab-image">
+                            <div class="tab-image--button">
+                              <a class="button is-danger is-bordered is-rounded">Descargar planos</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column is-5 has-text-grey">
+                      <div class="field">
+                        <label class="label">Nombre</label>
+                        <div class="control">
+                          <input class="input" type="text">
+                        </div>
+                      </div>
+
+                      <div class="field">
+                        <label class="label">Teléfono</label>
+                        <div class="control">
+                          <input class="input" type="tel">
+                        </div>
+                      </div>
+                      
+                      <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control">
+                          <input class="input" type="email">
+                        </div>
+                      </div>
+
+                      <div class="field">
+                        <div class="control">
+                          <label class="label">¿Qué buscas?</label>
+                          <label class="radio">
+                            <input type="radio" name="question">
+                            Local Comercial
+                          </label>
+                          <label class="radio">
+                            <input type="radio" name="question">
+                            Oficina
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="field">
+                        <label class="label">Comentarios</label>
+                        <div class="control">
+                          <textarea class="textarea has-fixed-size" rows="1"></textarea>
+                        </div>
+                      </div>
+
+                      <div class="field">
+                        <div class="control">
+                          <button class="button is-danger is-rounded is-bordered">Cotizar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section class="tab-content">
+                  <div class="columns is-multiline is-variable is-mobile">
+                    <div class="column is-12 has-text-centered mb-3">
+                      <h4 class="subtitle is-4">Locales Comerciales, Bodegas y Estacionamientos</h4>
+                    </div>
+                    <div class="column is-7">
+                      <div class="columns is-centered is-mobile">
+                        <div class="column is-10 is-relative">
+                          <div class="tab-box__image">
+                            <img src="./assets/images/plano-1.png" class="tab-image">
+                            <div class="tab-image--button">
+                              <a class="button is-danger is-bordered is-rounded">Descargar planos</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column is-5 has-text-grey">
+                      <div class="field">
+                        <label class="label">Nombre</label>
+                        <div class="control">
+                          <input class="input" type="text">
+                        </div>
+                      </div>
+
+                      <div class="field">
+                        <label class="label">Teléfono</label>
+                        <div class="control">
+                          <input class="input" type="tel">
+                        </div>
+                      </div>
+                      
+                      <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control">
+                          <input class="input" type="email">
+                        </div>
+                      </div>
+
+                      <div class="field">
+                        <div class="control">
+                          <label class="label">¿Qué buscas?</label>
+                          <label class="radio">
+                            <input type="radio" name="question">
+                            Local Comercial
+                          </label>
+                          <label class="radio">
+                            <input type="radio" name="question">
+                            Oficina
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="field">
+                        <label class="label">Comentarios</label>
+                        <div class="control">
+                          <textarea class="textarea has-fixed-size" rows="1"></textarea>
+                        </div>
+                      </div>
+
+                      <div class="field">
+                        <div class="control">
+                          <button class="button is-danger is-rounded is-bordered">Cotizar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+  <!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
+  <script src="./assets/js/index.js"></script>
 </body>
 </html>
