@@ -41,4 +41,10 @@
     font-weight: 700;
     margin-bottom: 50px;
   }
+  .title, .subtitle {
+    text-align: center;
+    @include MQ(lg) {
+      text-align: center;
+    }
+  }
 }
