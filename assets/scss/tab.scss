@@ -1,17 +1,16 @@
-#tabs-with-content .tabs:not(:last-child) {
+.tabs:not(:last-child) {
   margin-bottom: 0;
 }
 
-#tabs-with-content .tab-content {
-  padding: 1rem;
+.tab-content {
   display: none;
 }
 
-#tabs-with-content .tab-content.is-active {
-  display: block;
+.tab-content.is-active {
+  display: flex;
 }
 
-#tabs-with-content .tabs ul li.is-active {
+.tabs ul li.is-active {
   border-bottom: 3px solid green;
 }
 
@@ -31,6 +30,10 @@
           color: $black !important;
         }
       }
+    }
+    flex-flow: column;
+    @include MQ(md) {
+      flex-flow: inherit;
     }
   }
 }
@@ -73,5 +76,3 @@
     }
   }
 }
-
-

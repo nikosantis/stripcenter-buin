@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css">
+  <script src="https://kit.fontawesome.com/611c0ab45a.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 <body>
@@ -21,19 +22,19 @@
       <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
         <div class="container">
           <div class="navbar-brand">
-            <a class="navbar-item" href="https://bulma.io">
+            <a class="navbar-item" href="#">
               <img src="./assets/images/logo-stripcenter.png">
             </a>
         
-            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarHeader">
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
             </a>
           </div>
         
-          <div id="navbarBasicExample" class="navbar-menu navbar-end">
-            <div class="navbar-end">
+          <div id="navbarHeader" class="navbar-menu navbar-end">
+            <div class="navbar-end navbar-box">
               <a class="navbar-item">
                 Stripcenter
               </a>
@@ -90,18 +91,18 @@
   <section class="section first-content">
     <div class="container">
       <div class="columns is-multiline is-mobile is-centered">
-        <div class="column is-10 mb-5">
+        <div class="column is-10-tablet is-12-mobile mb-5">
           <h2 class="title is-2 s-title">22 Locales Comerciales y 32 Oficinas</h2>
           <h5 class="subtitle has-text-grey is-5 title-mb">Con la mejor conectividad de Alto Jahuel en Buin</h5>
-          <div class="columns is-vcentered is-mobile">
-            <div class="column is-three-fifths">
+          <div class="columns is-vcentered is-mobile is-multiline">
+            <div class="column is-10-tablet is-12-mobile">
               <div class="content is-medium">
                 <p>La alta conectividad y facilidad de accesos, son pilares fundamentales en el desarrollo de este nuevo proyecto de CBS.</p>
                 <p>Santiago, Puente Alto y Las Condes son importantes generadores de flujos, lo que se traduce en que el 33,5% de los vehículos que transitan por el sector pertenecen a los grupos ABC1 o C2.</p>
                 <p>La cercanía a desarrollos futuros de Colegio, Centro Educacional y Estación de Servicios, en pleno barrio residencial de gran crecimiento habitacional, son importantes factores de plusvalía.</p>
               </div>
             </div>
-            <div class="column has-text-centered">
+            <div class="column is-2-tablet is-12-mobile has-text-centered">
               <img src="./assets/images/icon-stripcenter.png" alt="">
             </div>
           </div>
@@ -176,7 +177,7 @@
         <div class="column is-10">
           <div class="columns">
             <div class="column is-12" id="tabs-with-content">
-              <div class="tabs is-centered is-medium mb-5">
+              <div class="tabs is-centered is-medium mb-5" id="tab1">
                 <ul>
                   <li class="is-active"><a>Subterráneo</a></li>
                   <li><a>Piso 1</a></li>
@@ -186,7 +187,83 @@
                 </ul>
               </div>
               <div>
-                <section class="tab-content">
+                <section class="tab-content" id="contentTab1">
+                  <div class="columns is-multiline is-variable is-mobile">
+                    <div class="column is-12 has-text-centered mb-3">
+                      <h4 class="subtitle is-4">Locales Comerciales, Bodegas y Estacionamientos</h4>
+                    </div>
+                    <div class="column is-7-tablet is-12-mobile">
+                      <div class="columns is-centered is-mobile">
+                        <div class="column is-10-tablet is-12-mobile is-relative">
+                          <div class="tab-box__image">
+                            <img src="./assets/images/plano-1.png" class="tab-image">
+                            <div class="tab-image--button">
+                              <a class="button is-danger is-bordered is-rounded">Descargar planos</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column is-5-tablet is-12-mobile has-text-grey">
+                      <div class="field mb-3">
+                        <label class="label">Nombre</label>
+                        <div class="control">
+                          <input class="input" type="text">
+                        </div>
+                      </div>
+
+                      <div class="field mb-3">
+                        <label class="label">Teléfono</label>
+                        <div class="control">
+                          <input class="input" type="tel">
+                        </div>
+                      </div>
+                      
+                      <div class="field mb-3">
+                        <label class="label">Email</label>
+                        <div class="control">
+                          <input class="input" type="email">
+                        </div>
+                      </div>
+
+                      <div class="field is-horizontal mb-3">
+                        <div class="field-label">
+                          <label class="label">¿Qué buscas?</label>
+                        </div>
+                        <div class="field-body">
+                          <div class="field is-narrow">
+                            <div class="control">
+                              <label class="radio">
+                                Local Comercial
+                                <input type="radio" name="question">
+                                <span class="radiobtn"></span>
+                              </label>
+                              <label class="radio">
+                                Oficina
+                                <input type="radio" name="question">
+                                <span class="radiobtn"></span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="field mb-5">
+                        <label class="label">Comentarios</label>
+                        <div class="control">
+                          <textarea class="textarea has-fixed-size" rows="1"></textarea>
+                        </div>
+                      </div>
+
+                      <div class="field">
+                        <div class="control">
+                          <button class="button is-danger is-rounded is-bordered">Cotizar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section class="tab-content" id="contentTab1">
                   <div class="columns is-multiline is-variable is-mobile">
                     <div class="column is-12 has-text-centered mb-3">
                       <h4 class="subtitle is-4">Locales Comerciales, Bodegas y Estacionamientos</h4>
@@ -254,7 +331,7 @@
                     </div>
                   </div>
                 </section>
-                <section class="tab-content">
+                <section class="tab-content" id="contentTab1">
                   <div class="columns is-multiline is-variable is-mobile">
                     <div class="column is-12 has-text-centered mb-3">
                       <h4 class="subtitle is-4">Locales Comerciales, Bodegas y Estacionamientos</h4>
@@ -322,7 +399,7 @@
                     </div>
                   </div>
                 </section>
-                <section class="tab-content">
+                <section class="tab-content" id="contentTab1">
                   <div class="columns is-multiline is-variable is-mobile">
                     <div class="column is-12 has-text-centered mb-3">
                       <h4 class="subtitle is-4">Locales Comerciales, Bodegas y Estacionamientos</h4>
@@ -390,75 +467,7 @@
                     </div>
                   </div>
                 </section>
-                <section class="tab-content">
-                  <div class="columns is-multiline is-variable is-mobile">
-                    <div class="column is-12 has-text-centered mb-3">
-                      <h4 class="subtitle is-4">Locales Comerciales, Bodegas y Estacionamientos</h4>
-                    </div>
-                    <div class="column is-7">
-                      <div class="columns is-centered is-mobile">
-                        <div class="column is-10 is-relative">
-                          <div class="tab-box__image">
-                            <img src="./assets/images/plano-1.png" class="tab-image">
-                            <div class="tab-image--button">
-                              <a class="button is-danger is-bordered is-rounded">Descargar planos</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="column is-5 has-text-grey">
-                      <div class="field">
-                        <label class="label">Nombre</label>
-                        <div class="control">
-                          <input class="input" type="text">
-                        </div>
-                      </div>
-
-                      <div class="field">
-                        <label class="label">Teléfono</label>
-                        <div class="control">
-                          <input class="input" type="tel">
-                        </div>
-                      </div>
-                      
-                      <div class="field">
-                        <label class="label">Email</label>
-                        <div class="control">
-                          <input class="input" type="email">
-                        </div>
-                      </div>
-
-                      <div class="field">
-                        <div class="control">
-                          <label class="label">¿Qué buscas?</label>
-                          <label class="radio">
-                            <input type="radio" name="question">
-                            Local Comercial
-                          </label>
-                          <label class="radio">
-                            <input type="radio" name="question">
-                            Oficina
-                          </label>
-                        </div>
-                      </div>
-
-                      <div class="field">
-                        <label class="label">Comentarios</label>
-                        <div class="control">
-                          <textarea class="textarea has-fixed-size" rows="1"></textarea>
-                        </div>
-                      </div>
-
-                      <div class="field">
-                        <div class="control">
-                          <button class="button is-danger is-rounded is-bordered">Cotizar</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-                <section class="tab-content">
+                <section class="tab-content" id="contentTab1">
                   <div class="columns is-multiline is-variable is-mobile">
                     <div class="column is-12 has-text-centered mb-3">
                       <h4 class="subtitle is-4">Locales Comerciales, Bodegas y Estacionamientos</h4>
@@ -533,6 +542,209 @@
       </div>
     </div>
   </section>
+
+  <section class="fourth-content">
+    <section class="section">
+      <div class="columns is-centered is-mobile is-multiline">
+        <div class="column is-12-mobile is-10-tablet">
+          <div class="columns is-mobile is-multiline">
+            <div class="column is-6-tablet is-12-mobile">
+              <h2 class="title is-2 s-title">Ubicación estratégica en Buin</h2>
+              <h5 class="subtitle has-text-grey is-5">Emplazado en un barrio residencial de gran crecimiento habitacional y comercial</h5>
+            </div>
+            <div class="column is-6-tablet is-12-mobile is-relative" id="tabs-with-content">
+              <div class="tabs is-centered is-medium" id="tab2">
+                <ul>
+                  <li class="is-active"><a>MAPA DE SERVICIOS</a></li>
+                  <li><a>MAPA GOOGLE MAPS</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="tab-content" id="contentTab2">
+      <img src="./assets/images/mapa.pn.png" alt="">
+    </div>
+    <div class="tab-content" id="contentTab2">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1659.0336171256722!2d-70.68554382069847!3d-33.733077510658916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x966326931ea83555%3A0x8b282c0b94e0fa82!2sMiraflores%20193%2C%20Alto%20Jahuel%2C%20Buin%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1580335464519!5m2!1ses!2scl" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    </div>
+  </section>
+
+  <section class="section fifth-content">
+    <div class="columns is-centered is-mobile is-multiline">
+      <div class="column is-10">
+        <h2 class="title is-2 s-title title-mb pt-3 has-text-white">¿Qué necesitas? Conversemos...</h2>
+      </div>
+      <div class="column is-10-tablet is-12-mobile">
+        <div class="columns is-mobile is-multiline">
+          <div class="column is-6-tablet is-12-mobile">
+            <h5 class="subtitle is-5 is-uppercase has-text-white">Dirección</h5>
+            <h4 class="title is-4 is-uppercase has-text-white mb-3">Alto Jahuel XXX, Buin</h4>
+            <br>
+            <h5 class="subtitle is-5 is-uppercase has-text-white">Teléfono</h5>
+            <h4 class="title is-4 is-uppercase has-text-white">
+              <a href="tel:+56900000000">+56 9 0000 0000</a>
+            </h4>
+            <div class="columns is-multiple is-vcentered">
+              <div class="column is-4">
+                <a href="#">
+                  <div class="icon-text">
+                    <div>
+                      <span class="icon is-large">
+                        <img src="./assets/images/logo-waze-01.svg" class="image is-48x48">
+                      </span>
+                    </div>
+                    <div>
+                      <span>Ir Con <br>Waze</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="column is-4">
+                <a href="#">
+                  <div class="icon-text">
+                    <div>
+                      <span class="icon is-large">
+                        <img src="./assets/images/logo-maps-02.svg" class="image is-48x48">
+                      </span>
+                    </div>
+                    <div>
+                      <span>Ir Con <br>GMaps</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-6-tablet is-12-mobile fifth-content-contact">
+            <div class="field is-horizontal mb-3">
+              <div class="field-body">
+                <div class="field">
+                  <label class="label">Nombre</label>
+                  <div class="control">
+                    <input class="input" type="text">
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="label">Empresa</label>
+                  <div class="control">
+                    <input class="input" type="text">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="field is-horizontal mb-3">
+              <div class="field-body">
+                <div class="field">
+                  <label class="label">Teléfono</label>
+                  <div class="control">
+                    <input class="input" type="tel">
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="label">Email</label>
+                  <div class="control">
+                    <input class="input" type="email">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="field is-horizontal mb-3">
+              <div class="field-label">
+                <label class="label">¿Qué buscas?</label>
+              </div>
+              <div class="field-body">
+                <div class="field is-narrow">
+                  <div class="control">
+                    <label class="radio">
+                      Local Comercial
+                      <input type="radio" name="question">
+                      <span class="radiobtn"></span>
+                    </label>
+                    <label class="radio">
+                      Oficina
+                      <input type="radio" name="question">
+                      <span class="radiobtn"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="field mb-5">
+              <label class="label">Comentarios</label>
+              <div class="control">
+                <textarea class="textarea has-fixed-size" rows="1"></textarea>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="control">
+                <button class="button is-danger is-rounded is-bordered">Cotizar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fifth-content-bg">
+      <div class="fifth-content-bg__left"></div>
+      <div class="fifth-content-bg__right"></div>
+    </div>
+  </section>
+
+  <footer class="section footer">
+    <div class="content has-text-centered">
+      <div class="columns is-mobile is-centered is-multiline">
+        <div class="column is-10-tablet is-12-mobile">
+          <p class="has-text-white is-size-7">Las imágenes contenidas en esta web fueron elaboradas con fines ilustrativos, pudiendo tener variaciones, por lo que no constituyen una representación exacta de la realidad. Su único objetivo es mostrar una caracterización general del proyecto y no cada uno de sus detalles. Las casas se entregan sin terrazas, sin pavimento de estacionamiento y sin pérgolas. Al momento de efectuar la compra, verifique las especificaciones técnicas y características definitivas de su casa, que podrán experimentar variaciones durante el desarrollo del proyecto.</p>
+        </div>
+        <div class="column is-10-tablet is-12-mobile">
+          <div class="columns is-multiline is-mobile is-vcentered">
+            <div class="column is-2-tablet is-12-mobile">
+              <img src="./assets/images/logo-cbs.png" class="footer-logo mx">
+            </div>
+
+            <div class="column is-10-tablet is-12-mobile has-text-white-ter">
+              <div class="columns is-multiline is-mobile footer-columns">
+                <div class="column is-4-tablet is-12-mobile has-text-left-tablet is-size-7">
+                  <span class="icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </span>
+                  <a href="https://www.google.com/maps/place/Av+Presidente+Kennedy+4700,+Vitacura,+Regi%C3%B3n+Metropolitana,+Chile/@-33.402602,-70.583952,15z/data=!4m5!3m4!1s0x9662cf3b2ddbf001:0x733a3facaca9a77f!8m2!3d-33.4026015!4d-70.5839518?hl=es-ES" class="has-text-white-ter">Avenida Kennedy 4700, piso 6, Vitacura.</a>
+                </div>
+                <div class="column is-12-mobile is-size-7">
+                  <span class="icon">
+                    <i class="fab fa-waze"></i>
+                  </span>
+                  <a href="https://www.waze.com/es-419/livemap?zoom=17&lat=-33.4025&lon=-70.58395" class="has-text-white-ter">Abrir con Waze</a>
+                </div>
+                <div class="column is-12-mobile is-size-7">
+                  <span class="icon">
+                    <i class="fas fa-mobile-alt"></i>
+                  </span>
+                  <a href="tel:+56 2 2733 3200" class="has-text-white-ter">+56 2 2733 3200</a>
+                </div>
+                <div class="column is-12-mobile has-text-right-tablet is-size-7">
+                  <span class="icon">
+                    <i class="far fa-envelope"></i>
+                  </span>
+                  <a href="mailto:contacto@cbsinmobiliaria.cl" class="has-text-white-ter">contacto@cbsinmobiliaria.cl</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
   <!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->

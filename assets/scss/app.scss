@@ -2,7 +2,99 @@ body {
   font-family: 'Nunito Sans', sans-serif !important;
 }
 
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 .third-content {
   background: rgb(255,255,255);
-background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(51,51,51,0.09987745098039214) 100%);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(51,51,51,0.09987745098039214) 100%);
+  .radiobtn {
+    border: 3px solid $black !important;
+  }
+}
+
+.fourth-content {
+  img {
+    width: 100%;
+  }
+  .tabs {
+    position: relative;
+    bottom: 0;
+    @include MQ(lg) {
+      position: absolute;
+    }
+  }
+}
+
+.fifth-content {
+  background-color: #1d1d1b;
+  background: url(../images/bg-contacto.jpg) no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 1300px;
+  position: relative;
+  width: 100vw;
+  @include MQ(md) {
+    height: 1200px;
+  }
+  @include MQ(lg) {
+    height: 800px;
+  }
+  &-bg {
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    bottom: -1px;
+    left: 0;
+    &__left {
+      width: 65vw;
+      height: 0;
+      border-bottom: 120px solid #1d1d1b;
+      border-right: 65vw solid transparent;
+    }
+    &__right {
+      width: 35vw;
+      height: 0;
+      border-bottom: 120px solid #1d1d1b;
+      border-left: 35vw solid transparent;
+    }
+  }
+  &-contact {
+    .field {
+      .label, .input, .radio {
+        color: #ffffff !important;
+      }
+      .control {
+        .input, .textarea {
+          border-bottom: 1px solid #ffffff;
+        }
+      }
+    }
+  }
+
+  .title, .subtitle {
+    a {
+      color: #ffffff !important;
+    }
+  }
+  a {
+    span {
+      color: #ffffff !important;
+      vertical-align: middle;
+      font-weight: 600;
+    }
+  }
+}
+
+.icon-text {
+  display: flex;
+  .icon {
+    margin-right: 10px;
+  }
 }

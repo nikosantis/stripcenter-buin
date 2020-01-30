@@ -1,11 +1,31 @@
 .navbar {
-  padding: 10px 50px;
+  @include MQ(md) {
+    padding: 10px 50px;
+  }
   &-item {
     text-transform: uppercase;
     font-weight: 900;
     color: $black !important;
     img {
       max-height: 55px;
+    }
+  }
+  .navbar-menu.is-active {
+    display: flex;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background: #ffffff!important;
+    text-align: center;
+    z-index: 1111;
+    .navbar-box {
+      width: 100%;
+      @include MQ(md) {
+        width: 100%;
+      }
+      .buttons {
+        justify-content: center;
+      }
     }
   }
 }
@@ -33,4 +53,8 @@
   -ms-transition: all .5s;
   -o-transition: all .5s;
   transition: all .5s;
+}
+
+.hero.is-dark .navbar-link.is-active, .hero.is-dark .navbar-link:hover, .hero.is-dark a.navbar-item.is-active, .hero.is-dark a.navbar-item:hover {
+  background-color: transparent !important;
 }

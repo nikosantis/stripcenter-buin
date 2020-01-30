@@ -6,3 +6,10 @@
     margin-bottom: 50px !important;
   }
 }
+
+.title, .subtitle {
+  text-align: center;
+  @include MQ(lg) {
+    text-align: left;
+  }
+}
