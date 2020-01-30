@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "Stripcenter",
+  "name": "stripcenter",
   "routes": [
     {
       "src": "(.*).js", "dest": "/$1.js"
