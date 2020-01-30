@@ -1,0 +1,14 @@
+.footer {
+  background: #1d1d1b;
+  padding-bottom: 1.8rem;
+  &-logo {
+    width: 150px;
+    @include MQ(md) {
+      width: 100px;
+    }
+  }
+  &-columns {
+    padding-top: 10px;
+    border-top: 1px solid;
+  }
+}
