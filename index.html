@@ -8,9 +8,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/plugins/owl-carousel/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="./assets/plugins/owl-carousel/assets/owl.theme.default.min.css">
   <script src="https://kit.fontawesome.com/611c0ab45a.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./assets/css/index.css">
 </head>
@@ -51,7 +52,7 @@
                 Ubicación
               </a>
               
-              <div class="navbar-item">
+              <div class="navbar-button">
                 <div class="buttons">
                   <a class="button is-danger is-rounded is-bordered">
                     <strong>Consultar</strong>
@@ -113,7 +114,7 @@
               <figure class="image is-64x64 has-text-centered mx mb-3">
                 <img src="./assets/images/ubicacion-icon.svg" alt="">
               </figure>
-              <h5 class="title is-5 has-text-danger has-text-weight-bold">Ubicación estratégica de alto flujo potencial</h5>
+              <h5 class="title is-5 has-text-danger has-text-weight-bold">Ubicación estratégica de alto flujo</h5>
             </div>
             <div class="column is-12-mobile is-desktop-3 has-text-centered">
               <figure class="image is-64x64 has-text-centered mx mb-3">
@@ -131,7 +132,7 @@
               <figure class="image is-64x64 has-text-centered mx mb-3">
                 <img src="./assets/images/estacionamientos-icon.svg" alt="">
               </figure>
-              <h5 class="title is-5 has-text-link has-text-weight-bold">XX Estacionamientos subterráneos y en superficie</h5>
+              <h5 class="title is-5 has-text-link has-text-weight-bold">205 Estacionamientos subterráneos y en superficie</h5>
             </div>
           </div>
         </div>
@@ -143,30 +144,102 @@
     <div class="container is-fullhd">
       <div class="columns">
         <div class="column is-12">
-          <div class="my-slider">
-            <div>
-              <img src="./assets/images/render-1.jpg" class="is-border-10" alt="">
+          <div class="owl-carousel owl-theme my-slider">
+            <div class="item">
+              <a id="carouselItem1">
+                <img src="./assets/images/render-1.jpg" class="is-border-10" alt="">
+              </a>
             </div>
-            <div>
-              <img src="./assets/images/render-2.jpg" class="is-border-10" alt="">
+            <div class="item">
+              <a id="carouselItem2">
+                <img src="./assets/images/render-2.jpg" class="is-border-10" alt="">
+              </a>
             </div>
-            <div>
-              <img src="./assets/images/render-3.jpg" class="is-border-10" alt="">
+            <div class="item">
+              <a id="carouselItem3">
+                <img src="./assets/images/render-3.jpg" class="is-border-10" alt="">
+              </a>
             </div>
-            <div>
-              <img src="./assets/images/render-4.jpg" class="is-border-10" alt="">
+            <div class="item">
+              <a id="carouselItem4">
+                <img src="./assets/images/render-4.jpg" class="is-border-10" alt="">
+              </a>
             </div>
-            <div>
-              <img src="./assets/images/render-5.jpg" class="is-border-10" alt="">
+            <div class="item">
+              <a id="carouselItem5">
+                <img src="./assets/images/render-5.jpg" class="is-border-10" alt="">
+              </a>
             </div>
-            <div>
-              <img src="./assets/images/render-6.jpg" class="is-border-10" alt="">
+            <div class="item">
+              <a id="carouselItem6">
+                <img src="./assets/images/render-6.jpg" class="is-border-10" alt="">
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <div class="modal modal1">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <p class="image is-16by9">
+        <img src="./assets/images/render-1.jpg" alt="">
+      </p>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+  <div class="modal modal2">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <p class="image is-16by9">
+        <img src="./assets/images/render-2.jpg" alt="">
+      </p>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+  <div class="modal modal3">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <p class="image is-16by9">
+        <img src="./assets/images/render-3.jpg" alt="">
+      </p>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+  <div class="modal modal4">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <p class="image is-16by9">
+        <img src="./assets/images/render-4.jpg" alt="">
+      </p>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+  <div class="modal modal5">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <p class="image is-16by9">
+        <img src="./assets/images/render-5.jpg" alt="">
+      </p>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+  <div class="modal modal6">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <p class="image is-16by9">
+        <img src="./assets/images/render-6.jpg" alt="">
+      </p>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
 
   <section class="section third-content">
     <div class="container">
@@ -746,8 +819,11 @@
     </div>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
-  <!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="./assets/plugins/owl-carousel/owl.carousel.min.js"></script>
   <script src="./assets/js/index.js"></script>
 </body>
 </html>

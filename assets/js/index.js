@@ -1,25 +1,30 @@
-const slider = tns({
-  container: '.my-slider',
-  items: 2,
+$('.loop').owlCarousel({
   center: true,
-  swipeAngle: false,
-  speed: 400,
-  mouseDrag: true,
-  gutter: 30,
-  loop: true,
-  navPosition: 'bottom',
-  controls: false,
-  speed: 300,
-  autoplay: true,
-  autoplayHoverPause: true,
-  autoplayTimeout: 3500,
-  autoplayButtonOutput: false,
-  responsive: {
-    0: {
-      items: 1
+  items:2,
+  loop:true,
+  margin:10,
+  responsive:{
+    600:{
+      items:4
+    }
+  }
+});
+
+$('.my-slider').owlCarousel({
+  center: true,
+  stagePadding: 50,
+  loop:true,
+  margin:30,
+  dots:true,
+  nav:false,
+  responsive:{
+    0:{
+      stagePadding: 30,
+      margin:10,
+      items:1
     },
-    768: {
-      items: 2
+    768:{
+      items:2
     }
   }
 });
@@ -144,4 +149,136 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+});
+
+document.querySelector('a#carouselItem1').addEventListener('click', (event) => {
+  event.preventDefault();
+  var modal = document.querySelector('.modal1');  // assuming you have only 1
+  var html = document.querySelector('html');
+  modal.classList.add('is-active');
+  html.classList.add('is-clipped');
+
+  modal.querySelector('.modal-background').addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.classList.remove('is-active');
+    html.classList.remove('is-clipped');
+  });
+
+  modal.querySelector('.modal-close').addEventListener('click', (ev) => {
+    ev.preventDefault();
+    var modal = document.querySelector('.modal1');  // assuming you have only 1
+    var html = document.querySelector('html');
+    modal.classList.remove('is-active');
+    html.classList.remove('is-clipped');
+  });
+});
+
+document.querySelector('a#carouselItem2').addEventListener('click', (event) => {
+  event.preventDefault();
+  var modal = document.querySelector('.modal2');  // assuming you have only 1
+  var html = document.querySelector('html');
+  modal.classList.add('is-active');
+  html.classList.add('is-clipped');
+
+  modal.querySelector('.modal-background').addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.classList.remove('is-active');
+    html.classList.remove('is-clipped');
+  });
+
+  modal.querySelector('.modal-close').addEventListener('click', (ev) => {
+    ev.preventDefault();
+    var modal = document.querySelector('.modal2');  // assuming you have only 1
+    var html = document.querySelector('html');
+    modal.classList.remove('is-active');
+    html.classList.remove('is-clipped');
+  });
+});
+
+document.querySelector('a#carouselItem3').addEventListener('click', (event) => {
+  event.preventDefault();
+  var modal = document.querySelector('.modal3');  // assuming you have only 1
+  var html = document.querySelector('html');
+  modal.classList.add('is-active');
+  html.classList.add('is-clipped');
+
+  modal.querySelector('.modal-background').addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.classList.remove('is-active');
+    html.classList.remove('is-clipped');
+  });
+
+  modal.querySelector('.modal-close').addEventListener('click', (ev) => {
+    ev.preventDefault();
+    var modal = document.querySelector('.modal3');  // assuming you have only 1
+    var html = document.querySelector('html');
+    modal.classList.remove('is-active');
+    html.classList.remove('is-clipped');
+  });
+});
+
+document.querySelector('a#carouselItem4').addEventListener('click', (event) => {
+  event.preventDefault();
+  var modal = document.querySelector('.modal4');  // assuming you have only 1
+  var html = document.querySelector('html');
+  modal.classList.add('is-active');
+  html.classList.add('is-clipped');
+
+  modal.querySelector('.modal-background').addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.classList.remove('is-active');
+    html.classList.remove('is-clipped');
+  });
+
+  modal.querySelector('.modal-close').addEventListener('click', (ev) => {
+    ev.preventDefault();
+    var modal = document.querySelector('.modal4');  // assuming you have only 1
+    var html = document.querySelector('html');
+    modal.classList.remove('is-active');
+    html.classList.remove('is-clipped');
+  });
+});
+
+document.querySelector('a#carouselItem5').addEventListener('click', (event) => {
+  event.preventDefault();
+  var modal = document.querySelector('.modal5');  // assuming you have only 1
+  var html = document.querySelector('html');
+  modal.classList.add('is-active');
+  html.classList.add('is-clipped');
+
+  modal.querySelector('.modal-background').addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.classList.remove('is-active');
+    html.classList.remove('is-clipped');
+  });
+
+  modal.querySelector('.modal-close').addEventListener('click', (ev) => {
+    ev.preventDefault();
+    var modal = document.querySelector('.modal5');  // assuming you have only 1
+    var html = document.querySelector('html');
+    modal.classList.remove('is-active');
+    html.classList.remove('is-clipped');
+  });
+});
+
+document.querySelector('a#carouselItem6').addEventListener('click', (event) => {
+  event.preventDefault();
+  var modal = document.querySelector('.modal6');  // assuming you have only 1
+  var html = document.querySelector('html');
+  modal.classList.add('is-active');
+  html.classList.add('is-clipped');
+
+  modal.querySelector('.modal-background').addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.classList.remove('is-active');
+    html.classList.remove('is-clipped');
+  });
+
+  modal.querySelector('.modal-close').addEventListener('click', (ev) => {
+    ev.preventDefault();
+    var modal = document.querySelector('.modal6');  // assuming you have only 1
+    var html = document.querySelector('html');
+    modal.classList.remove('is-active');
+    html.classList.remove('is-clipped');
+  });
 });
