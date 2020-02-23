@@ -1,14 +1,39 @@
 .footer {
   background: #1d1d1b;
   padding-bottom: 1.8rem;
+  &-venden {
+    width: 100%;
+    margin-bottom: 10px !important;
+  }
+  &-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   &-logo {
-    width: 150px;
-    @include MQ(md) {
+    &-cbs {
+      margin-right: 30px;
       width: 100px;
+      @include MQ(md) {
+        width: 100px;
+      }
+    }
+    &-recorp {
+      margin-right: 30px;
+      width: 150px;
+      @include MQ(md) {
+        width: 130px;
+        height: 60px;
+      }
     }
   }
   &-columns {
     padding-top: 10px;
     border-top: 1px solid;
+  }
+  &-icon {
+    font-size: 25px;
+    vertical-align: bottom;
+    margin-right: 10px;
   }
 }

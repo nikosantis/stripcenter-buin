@@ -47,6 +47,32 @@
     text-transform: uppercase;
     color: #7a7a7a!important;
   }
+  .control {
+    position: relative;
+    padding-top: 15px;
+    .label{
+      position: absolute;
+      top: 0.25rem;
+      pointer-events: none;
+      padding-left: 0.125rem;
+      z-index: 1;
+      font-size: 1rem;
+      transition: all 0.38s ease;
+    }
+
+    input:focus,
+    input:valid,
+    .textarea:focus,
+    .textarea:valid
+    {
+      ~ .label {
+        font-size: 0.8rem;
+        color: #616161;
+        top: -1rem;
+        left: 0;
+      }
+    }
+  }
   .button {
     text-transform: uppercase;
     font-weight: 700;

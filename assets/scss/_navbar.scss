@@ -85,6 +85,18 @@
 }
 
 .navbar-button {
-  margin-left: 20px;
   display: flex;
+  @include MQ(md) {
+    margin-left: 20px;
+  }
+}
+
+.navbar-burger {
+  height: 3.5rem;
+  width: 3.5rem;
+  margin-top: 9px;
+  span {
+    height: 2px;
+    width: 20px;
+  }
 }

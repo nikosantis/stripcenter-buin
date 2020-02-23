@@ -1,32 +1,27 @@
-$('.loop').owlCarousel({
-  center: true,
-  items:2,
-  loop:true,
-  margin:10,
-  responsive:{
-    600:{
-      items:4
+$( document ).ready(function() {
+  $('.my-slider').owlCarousel({
+    center: true,
+    stagePadding: 50,
+    loop:true,
+    autoplay:true,
+    autoplayTimeout:5000,
+    autoplayHoverPause:false,
+    autoplaySpeed: 500,
+    margin:30,
+    dots:true,
+    nav:false,
+    responsive:{
+      0:{
+        stagePadding: 30,
+        margin:10,
+        items:1
+      },
+      768:{
+        items:2
+      }
     }
-  }
-});
+  });
 
-$('.my-slider').owlCarousel({
-  center: true,
-  stagePadding: 50,
-  loop:true,
-  margin:30,
-  dots:true,
-  nav:false,
-  responsive:{
-    0:{
-      stagePadding: 30,
-      margin:10,
-      items:1
-    },
-    768:{
-      items:2
-    }
-  }
 });
 
 let tabsWithContent1 = (function () {
@@ -101,29 +96,39 @@ let tabsWithContent2 = (function () {
   tabs[0].click();
 })();
 
-
-
-var h = document.getElementById("navbarTop");
-var stuck = false;
-var stickPoint = getDistance();
-let navHeight = h.offsetHeight;
-
-function getDistance() {
-  var topDist = h.offsetTop;
-  return topDist;
-}
-
-window.onscroll = function(e) {
-  var distance = getDistance() - window.pageYOffset;
-  var offset = window.pageYOffset;
-  if ( window.pageYOffset > 200 && !stuck) {
-    h.classList.add('sticky');
-    stuck = true;
-  } else if (stuck && (offset <= stickPoint)){
-    h.classList.remove('sticky');
-    stuck = false;
+var NavbarSticky = (function () {
+  // Variables
+  var $nav = $('#navbarTop'),
+      navOffsetTop = 0,
+      scrolling = false;
+  // Methods
+  function init($this) {
+      // our current vertical position from the top
+      var scrollTop = $(window).scrollTop(),
+          navHeight = $this.outerHeight();
+      if (scrollTop > (navOffsetTop + 200)) {
+          $this.addClass('sticky');
+      } else {
+          $this.removeClass('sticky');
+      }
   }
-}
+  // Events
+  if ($nav.length) {
+      navOffsetTop = $nav.offset().top;
+      $(window).on({
+          'scroll': function () {
+              scrolling = true;
+              setInterval(function () {
+                  if (scrolling) {
+                      scrolling = false;
+                      // Sticky navbar init
+                      init($nav);
+                  }
+              }, 250);
+          }
+      })
+  }
+})();
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -151,134 +156,55 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-document.querySelector('a#carouselItem1').addEventListener('click', (event) => {
-  event.preventDefault();
-  var modal = document.querySelector('.modal1');  // assuming you have only 1
-  var html = document.querySelector('html');
-  modal.classList.add('is-active');
-  html.classList.add('is-clipped');
+document.querySelectorAll('.modal-button').forEach(function(el) {
+  el.addEventListener('click', function() {
+    var target = document.querySelector(el.getAttribute('data-target'));
 
-  modal.querySelector('.modal-background').addEventListener('click', (e) => {
-    e.preventDefault();
-    modal.classList.remove('is-active');
-    html.classList.remove('is-clipped');
-  });
+    target.classList.add('is-active');
 
-  modal.querySelector('.modal-close').addEventListener('click', (ev) => {
-    ev.preventDefault();
-    var modal = document.querySelector('.modal1');  // assuming you have only 1
-    var html = document.querySelector('html');
-    modal.classList.remove('is-active');
-    html.classList.remove('is-clipped');
+    target.querySelector('.modal-close').addEventListener('click', function() {
+      target.classList.remove('is-active');
+    });
+
+    target.querySelector('.modal-background').addEventListener('click', function() {
+      target.classList.remove('is-active');
+    });
   });
 });
 
-document.querySelector('a#carouselItem2').addEventListener('click', (event) => {
-  event.preventDefault();
-  var modal = document.querySelector('.modal2');  // assuming you have only 1
-  var html = document.querySelector('html');
-  modal.classList.add('is-active');
-  html.classList.add('is-clipped');
-
-  modal.querySelector('.modal-background').addEventListener('click', (e) => {
-    e.preventDefault();
-    modal.classList.remove('is-active');
-    html.classList.remove('is-clipped');
-  });
-
-  modal.querySelector('.modal-close').addEventListener('click', (ev) => {
-    ev.preventDefault();
-    var modal = document.querySelector('.modal2');  // assuming you have only 1
-    var html = document.querySelector('html');
-    modal.classList.remove('is-active');
-    html.classList.remove('is-clipped');
-  });
-});
-
-document.querySelector('a#carouselItem3').addEventListener('click', (event) => {
-  event.preventDefault();
-  var modal = document.querySelector('.modal3');  // assuming you have only 1
-  var html = document.querySelector('html');
-  modal.classList.add('is-active');
-  html.classList.add('is-clipped');
-
-  modal.querySelector('.modal-background').addEventListener('click', (e) => {
-    e.preventDefault();
-    modal.classList.remove('is-active');
-    html.classList.remove('is-clipped');
-  });
-
-  modal.querySelector('.modal-close').addEventListener('click', (ev) => {
-    ev.preventDefault();
-    var modal = document.querySelector('.modal3');  // assuming you have only 1
-    var html = document.querySelector('html');
-    modal.classList.remove('is-active');
-    html.classList.remove('is-clipped');
-  });
-});
-
-document.querySelector('a#carouselItem4').addEventListener('click', (event) => {
-  event.preventDefault();
-  var modal = document.querySelector('.modal4');  // assuming you have only 1
-  var html = document.querySelector('html');
-  modal.classList.add('is-active');
-  html.classList.add('is-clipped');
-
-  modal.querySelector('.modal-background').addEventListener('click', (e) => {
-    e.preventDefault();
-    modal.classList.remove('is-active');
-    html.classList.remove('is-clipped');
-  });
-
-  modal.querySelector('.modal-close').addEventListener('click', (ev) => {
-    ev.preventDefault();
-    var modal = document.querySelector('.modal4');  // assuming you have only 1
-    var html = document.querySelector('html');
-    modal.classList.remove('is-active');
-    html.classList.remove('is-clipped');
-  });
-});
-
-document.querySelector('a#carouselItem5').addEventListener('click', (event) => {
-  event.preventDefault();
-  var modal = document.querySelector('.modal5');  // assuming you have only 1
-  var html = document.querySelector('html');
-  modal.classList.add('is-active');
-  html.classList.add('is-clipped');
-
-  modal.querySelector('.modal-background').addEventListener('click', (e) => {
-    e.preventDefault();
-    modal.classList.remove('is-active');
-    html.classList.remove('is-clipped');
-  });
-
-  modal.querySelector('.modal-close').addEventListener('click', (ev) => {
-    ev.preventDefault();
-    var modal = document.querySelector('.modal5');  // assuming you have only 1
-    var html = document.querySelector('html');
-    modal.classList.remove('is-active');
-    html.classList.remove('is-clipped');
-  });
-});
-
-document.querySelector('a#carouselItem6').addEventListener('click', (event) => {
-  event.preventDefault();
-  var modal = document.querySelector('.modal6');  // assuming you have only 1
-  var html = document.querySelector('html');
-  modal.classList.add('is-active');
-  html.classList.add('is-clipped');
-
-  modal.querySelector('.modal-background').addEventListener('click', (e) => {
-    e.preventDefault();
-    modal.classList.remove('is-active');
-    html.classList.remove('is-clipped');
-  });
-
-  modal.querySelector('.modal-close').addEventListener('click', (ev) => {
-    ev.preventDefault();
-    var modal = document.querySelector('.modal6');  // assuming you have only 1
-    var html = document.querySelector('html');
-    modal.classList.remove('is-active');
-    html.classList.remove('is-clipped');
-  });
+// Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
 });

@@ -9,6 +9,12 @@ a {
   }
 }
 
+.first-content {
+  &--icon {
+    width: 80%;
+  }
+}
+
 .third-content {
   background: rgb(255,255,255);
   background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(51,51,51,0.09987745098039214) 100%);
@@ -19,7 +25,12 @@ a {
 
 .fourth-content {
   img {
-    width: 100%;
+    width: 150%;
+    max-width: 150%;
+    @include MQ(lg) {
+      width: 100%;
+      max-width: 100%;
+    }
   }
   .tabs {
     position: relative;
@@ -55,24 +66,53 @@ a {
     &__left {
       width: 65vw;
       height: 0;
-      border-bottom: 120px solid #1d1d1b;
+      border-bottom: 100px solid #1d1d1b;
+      @include MQ(md) {
+        border-bottom: 120px solid #1d1d1b;
+      }
       border-right: 65vw solid transparent;
     }
     &__right {
       width: 35vw;
       height: 0;
-      border-bottom: 120px solid #1d1d1b;
+      border-bottom: 100px solid #1d1d1b;
+      @include MQ(md) {
+        border-bottom: 120px solid #1d1d1b;
+      }
       border-left: 35vw solid transparent;
+    }
+  }
+
+  &--telefonos {
+    a {
+      margin-bottom: 5px;
+      color: #ffffff !important;
+    }
+  }
+  &--icons {
+    justify-content: center;
+    @include MQ(md) {
+      justify-content: start;
     }
   }
   &-contact {
     .field {
-      .label, .input, .radio {
+      .label, .input, .radio, .textarea {
         color: #ffffff !important;
       }
       .control {
+        padding-top: 20px;
         .input, .textarea {
           border-bottom: 1px solid #ffffff;
+        }
+        input:focus,
+        input:valid,
+        .textarea:focus,
+        .textarea:valid
+        {
+          ~ .label {
+            color: #ffffff;
+          }
         }
       }
     }
