@@ -32,6 +32,8 @@
 
 .top-sticky {
   background: transparent !important;
+  position: fixed;
+  z-index: 3;
 }
 
 .top-sticky.sticky {

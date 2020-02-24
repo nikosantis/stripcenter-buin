@@ -1,22 +1,36 @@
 .hero {
-  background: url(../images/bg-stripcenter.jpg) no-repeat center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   height: 100vh;
-  min-height: 400px;
+  &-slider {
+    height: 100vh;
+    &-bg {
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      height: 100vh;
+    }
+  }
+  &-abs-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 3;
+    display: flex;
+  }
   &-bg {
     position: absolute;
     width: 100vw;
     display: flex;
     bottom: 0;
+    z-index: 3;
     &__left {
       width: 65vw;
       height: 0;
       border-bottom: 100px solid #ffffff;
       @include MQ(md) {
-        border-bottom: 120px solid #1d1d1b;
+        border-bottom: 120px solid #ffffff;
       }
       border-right: 65vw solid transparent;
     }
@@ -25,7 +39,7 @@
       height: 0;
       border-bottom: 100px solid #ffffff;
       @include MQ(md) {
-        border-bottom: 120px solid #1d1d1b;
+        border-bottom: 120px solid #ffffff;
       }
       border-left: 35vw solid transparent;
     }

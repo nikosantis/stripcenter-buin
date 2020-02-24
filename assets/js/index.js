@@ -1,4 +1,15 @@
 $( document ).ready(function() {
+  $('.hero-slider').owlCarousel({
+    loop:true,
+    items: 1,
+    autoplay:true,
+    autoplayTimeout:5000,
+    autoplayHoverPause:false,
+    autoplaySpeed: 500,
+    dots:false,
+    nav:false
+  });
+
   $('.my-slider').owlCarousel({
     center: true,
     stagePadding: 50,
