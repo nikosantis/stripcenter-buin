@@ -1,6 +1,41 @@
+var NavbarSticky = (function () {
+  // Variables
+  var $nav = $('#navbarTop'),
+    navOffsetTop = 0,
+    scrolling = false;
+  // Methods
+  function init($this) {
+    // our current vertical position from the top
+    var scrollTop = $(window).scrollTop(),
+      navHeight = $this.outerHeight();
+    if (scrollTop > (navOffsetTop + 200)) {
+      $this.addClass('sticky');
+    } else {
+      $this.removeClass('sticky');
+    }
+  }
+  // Events
+  if ($nav.length) {
+    navOffsetTop = $nav.offset().top;
+    $(window).on({
+      'scroll': function () {
+        scrolling = true;
+        setInterval(function () {
+          if (scrolling) {
+            scrolling = false;
+            // Sticky navbar init
+            init($nav);
+          }
+        }, 250);
+      }
+    })
+  }
+})();
+
 $( document ).ready(function() {
   $('.hero-slider').owlCarousel({
     loop:true,
+    animateOut: 'fadeOut',
     items: 1,
     autoplay:true,
     autoplayTimeout:5000,
@@ -12,6 +47,7 @@ $( document ).ready(function() {
 
   $('.my-slider').owlCarousel({
     center: true,
+    animateOut: 'fadeOut',
     stagePadding: 50,
     loop:true,
     autoplay:true,
@@ -32,7 +68,6 @@ $( document ).ready(function() {
       }
     }
   });
-
 });
 
 let tabsWithContent1 = (function () {
@@ -105,40 +140,6 @@ let tabsWithContent2 = (function () {
   })
 
   tabs[0].click();
-})();
-
-var NavbarSticky = (function () {
-  // Variables
-  var $nav = $('#navbarTop'),
-      navOffsetTop = 0,
-      scrolling = false;
-  // Methods
-  function init($this) {
-      // our current vertical position from the top
-      var scrollTop = $(window).scrollTop(),
-          navHeight = $this.outerHeight();
-      if (scrollTop > (navOffsetTop + 200)) {
-          $this.addClass('sticky');
-      } else {
-          $this.removeClass('sticky');
-      }
-  }
-  // Events
-  if ($nav.length) {
-      navOffsetTop = $nav.offset().top;
-      $(window).on({
-          'scroll': function () {
-              scrolling = true;
-              setInterval(function () {
-                  if (scrolling) {
-                      scrolling = false;
-                      // Sticky navbar init
-                      init($nav);
-                  }
-              }, 250);
-          }
-      })
-  }
 })();
 
 document.addEventListener('DOMContentLoaded', () => {

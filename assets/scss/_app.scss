@@ -25,12 +25,8 @@ a {
 
 .fourth-content {
   img {
-    width: 150%;
-    max-width: 150%;
-    @include MQ(lg) {
-      width: 100%;
-      max-width: 100%;
-    }
+    width: 100%;
+    max-width: 100%;
   }
   .tabs {
     position: relative;
@@ -45,12 +41,6 @@ a {
 }
 
 .fifth-content {
-  background-color: #1d1d1b;
-  background: url(../images/bg-contacto.jpg) no-repeat center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   height: 1300px;
   position: relative;
   width: 100vw;
@@ -140,4 +130,8 @@ a {
   .icon {
     margin-right: 10px;
   }
+}
+
+:focus {
+  outline: none;
 }
